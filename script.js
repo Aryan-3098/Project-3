@@ -92,40 +92,61 @@ const ShowMsgs=()=>{
     let nnt=document.getElementById('nnaTOption').value;
     let ph=parseInt(h.innerText)
     let arr1=wt.split(" ")
-    if(arr1[0]===ph){
+    let arr2=lt.split(" ")
+    let arr3=nt.split(" ")
+    let arr4=nnt.split(" ")
+    console.log(arr1[0],"m");
+    console.log(arr2[0]),"l";
+    console.log(arr3[0],"n");
+    console.log(arr4[0],"nn");
+    console.log(ph);
+    if(arr1[0]==ph && arr1[1]==a.innerText){
+        console.log("if Morning");
         document.getElementById("timeMsg1").innerText="Good Morning"
-        document.getElementById("timeMsg2").innerText="Hey Its Morning Wake Up";
+        document.getElementById("timeMsg2").innerHTML="<h2>Hey Its Time To Wake Up</h2>"
         document.getElementById('images').style.backgroundImage = "url('./assets/images/Morning.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
     }
-    let arr2=lt.split(" ")
-    if(arr2[0]===ph){
+    
+    else if(arr2[0]==ph && arr2[1]==a.innerText){
+        console.log("if Lunch");
         document.getElementById("timeMsg1").innerText="Good Afternoon"
-        document.getElementById("timeMsg2").innerText="Good Afternoon"
+        document.getElementById("timeMsg2").innerHTML="<h2>Eat Your Lunch</h2>"
         document.getElementById('images').style.backgroundImage = "url('./assets/images/Lunch.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
     }
-    let arr3=nt.split(" ")
-    if(arr3[0]===ph){
+    
+    else if(arr3[0]==ph && arr3[1]==a.innerText){
+        console.log("if Nap");
         document.getElementById("timeMsg1").innerText="Good Evening"
-        document.getElementById("timeMsg2").innerText="Have Some Snacks"
+        document.getElementById("timeMsg2").innerHTML="<h2>Time to take a nap</h2>"
         document.getElementById('images').style.backgroundImage = "url('./assets/images/Evening.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
     }
-    let arr4=nnt.split(" ")
-    if(arr4[0]==ph||arr4[0]==(ph)+1||arr4[0]==(ph)+2||arr4[0]==(ph)+3){
+    
+    else if(arr4[0]==ph && arr4[1]==a.innerText){
+        console.log("if night");
+        console.log(arr4[1]);
         document.getElementById("timeMsg1").innerText="Good Night"
-        document.getElementById("timeMsg2").innerHTML="<h2>Close Your Eyes And Sleep</h2>"
+        document.getElementById("timeMsg2").innerHTML="<h2>Its Night Time,Close Your Eyes And Sleep</h2>"
         document.getElementById('images').style.backgroundImage = "url('./assets/images/Night.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
+    }
+    else{
+        document.getElementById("timeMsg1").innerText="Welcome"
+        document.getElementById("timeMsg2").innerHTML="<h2>Choose Time and Click on Button to Start</h2>"
+        document.getElementById('images').style.backgroundImage = "url('/assets/images/332740.jpg')"
+        document.getElementById('images').style.backgroundRepeat = "no-repeat"
+        document.getElementById('images').style.backgroundSize = "cover"
+        document.getElementById('images').innerHTML = "<p style='color:white;text-decoration: underline;text-decoration-color:#e030ff;font-size:30px'>Welcome to Aryan's Digital Clock</p>";
     }
     setInterval(ShowMsgs  ,108000)
 }
