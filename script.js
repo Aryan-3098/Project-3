@@ -124,7 +124,7 @@ const ShowMsgs=()=>{
         console.log("if Nap");
         document.getElementById("timeMsg1").innerText="Good Evening"
         document.getElementById("timeMsg2").innerHTML="<h2>Time to take a nap</h2>"
-        document.getElementById('images').style.backgroundImage = "url('./assets/images/Evening.png')"
+        document.getElementById('images').style.backgroundImage = "url('./assets/images/Night.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
@@ -135,7 +135,7 @@ const ShowMsgs=()=>{
         console.log(arr4[1]);
         document.getElementById("timeMsg1").innerText="Good Night"
         document.getElementById("timeMsg2").innerHTML="<h2>Its Night Time,Close Your Eyes And Sleep</h2>"
-        document.getElementById('images').style.backgroundImage = "url('./assets/images/Night.png')"
+        document.getElementById('images').style.backgroundImage = "url('./assets/images/Night1.png')"
         document.getElementById('images').style.backgroundRepeat = "no-repeat"
         document.getElementById('images').style.backgroundSize = "cover"
         document.getElementById('images').innerText = " ";
